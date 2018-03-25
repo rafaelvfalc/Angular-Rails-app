@@ -3,6 +3,13 @@ angular
 	.config(['$stateProvider', '$urlRouterProvider', 
 		function($stateProvider, $urlRouterProvider) {
 			$stateProvider
+
+			.state('login', {
+				url: '/login',
+				templateUrl: 'main/_login.html',
+				controller: 'MainCtrl'
+			})
+
 			.state('home', {
 				url: '/home',
 				templateUrl: 'main/_home.html',
@@ -14,5 +21,9 @@ angular
 				templateUrl: 'main/_search.html',
 				controller: 'MainCtrl'
 			});
-			$urlRouterProvider.otherwise('home');
+
+			$urlRouterProvider.otherwise(function() {
+                console.log("Could not find URL");
+                return 'login'
+            });
 	}])
