@@ -1,5 +1,9 @@
-<h1> Login Page </h1>
+<h1> E-Commerce Rails </h1>
 
-<div>
-	<a href="#!/home"> Login! </a>
-</div>
+<div ng-controller="LoginCtrl">
+	<form action= "#!/login" id="mylogin">
+		Username: <input type="text" id="username" ng-model="username"><br>
+		Password: <input type="password" id="password" ng-model="password"><br>
+		<button type="button" ng-click="submit()">Login</button>
+	</form>
+</div> 

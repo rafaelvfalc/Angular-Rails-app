@@ -7,7 +7,7 @@ angular
 			.state('login', {
 				url: '/login',
 				templateUrl: 'main/_login.html',
-				controller: 'MainCtrl'
+				controller: 'LoginCtrl'
 			})
 
 			.state('home', {
