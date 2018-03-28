@@ -17,7 +17,7 @@ export class PostNewComponent {
 	createPost(post: Post) {
 		this.submitted = true;
 		this.postService.createPost(post)
-			.subscribe(data => {return true}
+			.subscribe(data => {return true},
 				error => {
 				alert("Error while creating new post");
 				return Observable.throw(error);
